@@ -1,13 +1,44 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title></title>
+<title>Battlescript editor</title>
+<style type="text/css" media="screen">
+    #editor { 
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      width: 50%
+    }
+
+    #editor2{
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      right: 0;
+      width: 50%
+    }
+
+
+</style>
 </head>
 <body>
-    <div class='player1'> </div>
-    <div class="player2"> </div>
 
-    <script type="text/javascript" src="easySocket.js"></script>
-    <script type="text/javascript" src="syntaxManage.js"></script>
+<div id="editor" ></div>
+    
+<div id="editor2" ></div>
+
+<script src="ace.js" type="text/javascript" charset="utf-8"></script>
+<script>
+    var editor1 = ace.edit("editor");
+    editor1.setTheme("ace/theme/monokai");
+    editor1.getSession().setMode("ace/mode/javascript");
+
+    var editor2 = ace.edit("editor2");
+    editor2.setTheme("ace/theme/monokai");
+    editor2.getSession().setMode("ace/mode/javascript");
+</script>
 </body>
 </html>

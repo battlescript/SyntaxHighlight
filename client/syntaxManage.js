@@ -1,1 +1,0 @@
-syntaxManage.js
